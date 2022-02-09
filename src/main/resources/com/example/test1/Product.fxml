@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane_product" prefHeight="600.0" prefWidth="953.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.ProductController">
+   <children>
+      <Label layoutX="14.0" layoutY="22.0" prefHeight="32.0" prefWidth="288.0" text="Gestion des Produits" textFill="#8b1794">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="12.0" layoutY="68.0" prefHeight="481.0" prefWidth="288.0" style="-fx-border-color: #793994;">
+         <children>
+            <Label layoutX="21.0" layoutY="20.0" prefHeight="35.0" prefWidth="122.0" text="id_produit ">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="65.0" prefHeight="35.0" prefWidth="122.0" text="Nom">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="109.0" prefHeight="35.0" prefWidth="122.0" text="Fourniseur">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idtextfield" layoutX="119.0" layoutY="25.0" />
+            <TextField fx:id="nomtextfield" layoutX="119.0" layoutY="70.0" />
+            <TextField fx:id="fourniseurtextfield" layoutX="119.0" layoutY="114.0" />
+            <Button fx:id="ajouterbutton" layoutX="33.0" layoutY="346.0" mnemonicParsing="false" onAction="#AjouterButtonAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #793994; -fx-background-radius: 15; -fx-cursor: hand;" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="supprimerbutton" layoutX="159.0" layoutY="346.0" mnemonicParsing="false" onAction="#SupprimerButtonAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #793994; -fx-background-radius: 15; -fx-cursor: hand;" text="Spprimer" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="modifierbutton" layoutX="33.0" layoutY="397.0" mnemonicParsing="false" onAction="#ModifierButtonAction" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #793994; -fx-background-radius: 15; -fx-cursor: hand;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="193.0" prefHeight="35.0" prefWidth="122.0" text="Prix">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="147.0" prefHeight="35.0" prefWidth="122.0" text="Quantite">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantitetextfield" layoutX="119.0" layoutY="152.0" />
+            <TextField fx:id="prixtextfield" layoutX="119.0" layoutY="198.0" />
+            <Button fx:id="clearbutton" layoutX="159.0" layoutY="397.0" mnemonicParsing="false" onAction="#ClearTextField" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #793994; -fx-background-radius: 15; -fx-cursor: hand;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="581.0" layoutY="14.0" prefHeight="42.0" prefWidth="344.0">
+         <children>
+            <Label prefHeight="42.0" prefWidth="124.0" text="Recherche" />
+            <TextField fx:id="filterField" prefHeight="25.0" prefWidth="220.0" promptText="Recherche">
+               <HBox.margin>
+                  <Insets right="15.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <TableView fx:id="tableproduits" layoutX="313.0" layoutY="69.0" onMouseClicked="#onTableItemSelect" onSort="#showsProduits" prefHeight="481.0" prefWidth="636.0">
+         <columns>
+            <TableColumn fx:id="id_col" prefWidth="114.0" text="id_produit" />
+            <TableColumn fx:id="nom_col" prefWidth="128.0" text="Nom" />
+            <TableColumn fx:id="fourniseur_col" prefWidth="128.0" text="Fourniseur" />
+            <TableColumn fx:id="quantite_col" prefWidth="126.0" text="Quantite" />
+            <TableColumn fx:id="prix_col" prefWidth="139.0" text="Prix" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

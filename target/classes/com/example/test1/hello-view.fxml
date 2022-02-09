@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.HelloController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
+         <left>
+            <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #0598ff;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" fontSmoothingType="LCD" layoutX="87.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="welcome" wrappingWidth="175.47003936767578">
+                     <font>
+                        <Font name="Tahoma" size="33.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="messageLabel" layoutX="32.0" layoutY="89.0" prefHeight="70.0" prefWidth="294.0" text="Label" textFill="#d71d1d" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="userNameText" layoutX="119.0" layoutY="195.0" promptText="user name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-border-radius: 20px;" />
+                  <PasswordField fx:id="passwordText" layoutX="119.0" layoutY="262.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px; -fx-border-radius: 25px;" />
+                  <ImageView fx:id="userImageView" fitHeight="25.0" fitWidth="25.0" layoutX="68.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/download.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="passwordImageView" fitHeight="25.0" fitWidth="25.0" layoutX="67.0" layoutY="263.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/passAvatar2.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="SignInButton" layoutX="155.0" layoutY="330.0" mnemonicParsing="false" onAction="#LoginButtonAction" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #0598ff; -fx-border-radius: 20%;" text="Sign In " textFill="WHITE" underline="true" />
+                  <Hyperlink layoutX="128.0" layoutY="426.0" text="Forgot your password !" />
+                  <ImageView fx:id="loginImageView" fitHeight="40.0" fitWidth="35.0" layoutX="164.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/go1.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#0598ff" layoutX="126.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login " wrappingWidth="110.8033447265625">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
