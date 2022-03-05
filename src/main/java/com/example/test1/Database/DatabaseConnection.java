@@ -13,7 +13,7 @@ public class DatabaseConnection {
     public void Connect() {
         try {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/"+DatabaseName+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
-                    "root", "gnana");
+                    "root", "");
             stmt = con.createStatement();
         } catch (SQLException e) {
             e.printStackTrace();
