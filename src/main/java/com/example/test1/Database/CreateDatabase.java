@@ -11,7 +11,7 @@ public class CreateDatabase {
         String DatabaseName="stock";
         try {
             con= DriverManager.getConnection("jdbc:mysql://localhost:3306?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
-                    "root","gnana");
+                    "root","");
             stmt = con.createStatement();
             stmt.executeUpdate("DROP DATABASE "+DatabaseName);
             int status = stmt.executeUpdate("CREATE DATABASE "+DatabaseName);
